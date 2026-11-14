@@ -227,129 +227,67 @@ html body .container.main h1,
 html body .container.main a:not(.btn) {
     color: #674833;
 }
-/* =========================================
-   EARTHBOUND V4 — cards, comments, leaves
-   Paste at the VERY bottom
-========================================= */
 
-/* --- 1) Recolor thumbnail cards / cave cards / dynasty boxes --- */
+/* ==========================================================
+   EARTHBOUND V5 - targeted Lioden fixes
+   Replaces the old V4 guesses. Keep sections above this.
+   ========================================================== */
 
-/* General card containers */
-.thumbnail,
-.feature,
-.well,
-.panel,
-.div_box,
-.item,
-.cave,
-.mound {
-  background: #d8c5a5 !important;
-  border: 1px solid #a07a57 !important;
-  color: #5f4230 !important;
-  box-shadow: none !important;
+/* Actual Lioden feature/dynasty tile backgrounds. */
+html body .container.main .feature,
+html body .container.main div.left {
+  background: #b89b7c !important;
+  background-color: #b89b7c !important;
+  border: 1px solid #927052 !important;
+  color: #493226 !important;
+  border-radius: 7px !important;
+}
+html body .container.main .feature a,
+html body .container.main div.left a { color: #573a29 !important; }
+
+/* Lioden cave and beetle mound cards and their caption area. */
+html body .container.main .cave-grid,
+html body .container.main .mound-grid {
+  background: #e5d1b1 !important;
+  background-color: #e5d1b1 !important;
+  color: #553a2b !important;
+  border: 1px solid #9b7857 !important;
+  border-radius: 7px !important;
+}
+html body .container.main .cave-grid a,
+html body .container.main .mound-grid a { color: #674833 !important; }
+
+/* Settings strip and the other Lioden native section headers. */
+html body .container.main .item-header {
+  background: #76533d !important;
+  background-color: #76533d !important;
+  color: #f1dec1 !important;
+  border: 1px solid #987552 !important;
 }
 
-/* Caption / label areas under images */
-.thumbnail .caption,
-.caption,
-.panel-footer,
-.feature-footer,
-.cave-footer,
-.mound-footer {
-  background: #ead9ba !important;
-  color: #6b4a35 !important;
-  border-top: 1px solid #b08b66 !important;
-}
+/* Hide the whole known comment UI, not just its input. */
+html body #commentBox,
+html body #makeComment,
+html body #comment,
+html body #postComment { display: none !important; }
 
-/* Titles/text inside those boxes */
-.thumbnail h3,
-.thumbnail h4,
-.caption,
-.caption a,
-.panel-title,
-.feature a,
-.well a {
-  color: #744f37 !important;
-}
-
-/* Buttons/links that sit in box-like rows */
-.container.main .btn,
-.container.main .btn-default,
-.container.main button,
-.container.main input[type="submit"] {
-  background: #8a6547 !important;
-  border-color: #b18a62 !important;
-  color: #f6e7c9 !important;
-}
-
-.container.main .btn:hover,
-.container.main .btn-default:hover,
-.container.main button:hover,
-.container.main input[type="submit"]:hover {
-  background: #a17653 !important;
-  color: #fff4df !important;
-}
-
-/* --- 2) Hide profile comment section --- */
-/* Note: this removes the visible comments area + input */
-#commentBox,
-.commentBox,
-.comment-box,
-textarea[name="comment"],
-input[placeholder="Comment"],
-input[value="Post"],
-input[type="submit"][value="Post"] {
-  display: none !important;
-}
-
-/* Sometimes the empty comment wrapper still remains */
-div:has(> #commentBox),
-div:has(> .commentBox),
-div:has(> textarea[name="comment"]) {
-  display: none !important;
-}
-
-/* Fallback: hide common bordered comment areas */
-.container.main > div[style*="border"],
-.container.main .comment-holder {
-  display: none !important;
-}
-
-/* --- 3) Decorative side leaves --- */
-body {
-  position: relative;
-}
-
-body::before,
-body::after {
+/* Brown botanical side decorations. Put OVER the outer background,
+   rather than BEHIND the opaque den container as V4 did. */
+html body::before,
+html body::after {
   content: "";
+  display: block;
   position: fixed;
-  top: 120px;
-  width: 220px;
-  height: 760px;
+  top: 8vh;
+  height: 84vh;
+  width: clamp(85px, 16vw, 250px);
   pointer-events: none;
-  z-index: 0;
-  opacity: 0.22;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 760'><g fill='%23553a2b' fill-opacity='1'><path d='M154 34c-34 10-80 57-91 136 79-15 129-61 138-127-14-8-29-11-47-9z'/><path d='M78 151c19 33 67 79 135 93-16-73-58-124-123-137-10 13-18 28-12 44z'/><path d='M158 285c-38 9-87 58-97 138 81-18 133-66 142-130-12-7-29-11-45-8z'/><path d='M84 415c21 32 68 75 132 85-15-69-57-116-120-126-11 12-19 25-12 41z'/><path d='M150 533c-35 8-77 49-87 117 70-14 120-56 129-111-12-8-24-10-42-6z'/><path d='M90 633c19 27 57 59 112 67-13-56-45-93-97-103-10 8-18 18-15 36z'/></g></svg>");
+  z-index: 50;
+  opacity: .36;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22250%22%20height%3D%22780%22%20viewBox%3D%220%200%20250%20780%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%2373513b%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M8%2015%20C120%20150%2038%20265%20157%20386%20S118%20609%20230%20770%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%237c5740%22%20stroke%3D%22%234a3026%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M47%2078%20Q-4%2067%2013%2011%20Q79%2029%2047%2078Z%22%2F%3E%3Cpath%20d%3D%22M81%20160%20Q136%2082%20196%2099%20Q156%20166%2081%20160Z%22%2F%3E%3Cpath%20d%3D%22M61%20252%20Q-2%20222%2016%20154%20Q79%20169%2061%20252Z%22%2F%3E%3Cpath%20d%3D%22M125%20349%20Q157%20255%20237%20266%20Q217%20334%20125%20349Z%22%2F%3E%3Cpath%20d%3D%22M151%20443%20Q73%20426%2079%20355%20Q145%20359%20151%20443Z%22%2F%3E%3Cpath%20d%3D%22M147%20551%20Q175%20470%20244%20481%20Q222%20543%20147%20551Z%22%2F%3E%3Cpath%20d%3D%22M163%20642%20Q87%20622%2097%20564%20Q158%20579%20163%20642Z%22%2F%3E%3Cpath%20d%3D%22M206%20733%20Q232%20660%20249%20664%20L249%20729Z%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23c09a72%22%20stroke-width%3D%221.6%22%20opacity%3D%22.6%22%3E%3Cpath%20d%3D%22M47%2078%20L13%2011%20M81%20160%20L196%2099%20M61%20252%20L16%20154%20M125%20349%20L237%20266%20M151%20443%20L79%20355%20M147%20551%20L244%20481%20M163%20642%20L97%20564%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center center / contain no-repeat;
 }
-
-body::before {
-  left: 12px;
-}
-
-body::after {
-  right: 12px;
-  transform: scaleX(-1);
-}
-
-/* Keep site content above the decorative leaves */
-#main,
-.container.main,
-.navbar,
-#header,
-#content {
-  position: relative;
-  z-index: 1;
+html body::before { left: 0; }
+html body::after { right: 0; transform: scaleX(-1); }
+@media(max-width: 800px) {
+  html body::before, html body::after { opacity: .16; width: 90px; }
 }
