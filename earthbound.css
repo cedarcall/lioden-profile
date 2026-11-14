@@ -1,0 +1,87 @@
+/* EARTHBOUND — custom Lioden den styling inspired by a dark-maned tawny king */
+/* Upload this .css file to a public HTTPS static host; link it in Territory Description. */
+:root {
+  --eb-ink: #261b16;
+  --eb-espresso: #37251d;
+  --eb-bark: #553a2b;
+  --eb-walnut: #78543d;
+  --eb-tawny: #ae805b;
+  --eb-sand: #d5b58c;
+  --eb-parchment: #ead8b9;
+  --eb-olive: #85815a;
+  --eb-border: #927052;
+}
+body {
+  background-color: #271e19 !important;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(186,137,89,.32), transparent 52%),
+    repeating-linear-gradient(115deg, transparent 0, transparent 4px, rgba(233,192,139,.018) 5px, transparent 8px),
+    linear-gradient(150deg, #594333 0%, #31251e 52%, #211b17 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--eb-parchment);
+}
+a { color: #cfa979; }
+a:hover, a:focus { color: #f3d5a1; }
+/* Main site layout; keep important site controls visible. */
+#main, #content, .container.main {
+  background: rgba(42,30,24,.94) !important;
+  border-left: 1px solid rgba(196,153,105,.48) !important;
+  border-right: 1px solid rgba(196,153,105,.48) !important;
+  box-shadow: 0 12px 65px rgba(0,0,0,.45);
+}
+#sidebar, .sidebar {
+  background: rgba(47,33,26,.94) !important;
+  color: var(--eb-parchment) !important;
+}
+.navbar, .navbar-default, .navbar-inverse, #header, #menu {
+  background-color: #35241c !important;
+  border-color: #79593c !important;
+}
+.navbar a, .navbar-default .navbar-nav > li > a,
+.navbar-inverse .navbar-nav > li > a { color: #ebd2a9 !important; }
+.navbar a:hover, .navbar-default .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:hover { background: #654a34 !important; color: #fff2d9 !important; }
+.panel, .panel-default, .well, .alert, .table, table { border-color: #8c6748 !important; }
+.panel, .panel-default, .well {
+  background: #493429 !important;
+  color: #f0dcc0 !important;
+  border-radius: 4px !important;
+}
+.panel-heading, .panel-default > .panel-heading,
+.table > thead > tr > th, .table > tbody > tr > th,
+th, .topbar, .title {
+  background: #694a33 !important;
+  border-color: #95704e !important;
+  color: #fff0ce !important;
+}
+.table > tbody > tr > td, .table > thead > tr > td,
+td, .table > tbody > tr > th { border-color: #75573f !important; }
+.table-striped > tbody > tr:nth-of-type(odd), tr:nth-child(odd) { background-color: rgba(171,119,73,.12); }
+.table-striped > tbody > tr:nth-of-type(even), tr:nth-child(even) { background-color: rgba(40,28,22,.12); }
+.btn, .btn-default, button, input[type='submit'] {
+  background: #79553a !important;
+  border: 1px solid #ac845a !important;
+  color: #fff0d0 !important;
+  border-radius: 4px !important;
+}
+.btn:hover, .btn-default:hover, button:hover, input[type='submit']:hover { background: #9a704b !important; }
+input, textarea, select { background-color: #e9d9bf; color: #302219; border-color: #977858; }
+/* Decorative territory description: names are prefixed to avoid clashing with Lioden. */
+.eb-profile { max-width: 900px; margin: 15px auto; color: #f0ddbd; font: 14px/1.7 Georgia, 'Times New Roman', serif; }
+.eb-profile * { box-sizing: border-box; }
+.eb-hero { position: relative; padding: 32px 26px; text-align: center; border: 1px solid #b18b60; background: radial-gradient(ellipse at center top, rgba(179,130,80,.22), transparent 70%), linear-gradient(160deg, #65452f, #2e221c 72%); box-shadow: inset 0 0 0 5px #34261f, 0 8px 30px #180f0ca8; }
+.eb-eyebrow { color: #c8ab7d; letter-spacing: 4px; text-transform: uppercase; font: 10px/1.7 Arial, sans-serif; }
+.eb-hero h2 { margin: 8px 0 3px !important; color: #f2dbb5 !important; font: normal 36px/1.2 Georgia,serif !important; letter-spacing: 2px; text-shadow: 0 3px 10px #160e0b; }
+.eb-subtitle { color: #c9ae88; font-style: italic; }
+.eb-rule { display:flex; align-items:center; justify-content:center; gap:14px; margin: 18px auto; color:#baa076; }
+.eb-rule:before,.eb-rule:after { content:''; display:block; width:25%; height:1px; background:linear-gradient(90deg,transparent,#b6966a,transparent); }
+.eb-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top:14px; }
+.eb-box { border: 1px solid #987650; background: linear-gradient(160deg, #523b2b, #332720); padding: 19px 20px; box-shadow: inset 0 0 0 3px rgba(20,13,10,.25); }
+.eb-box h3 { color:#f1d5a7 !important; border-bottom:1px solid #96724a; padding-bottom: 8px; margin:0 0 12px !important; font: normal 17px Georgia,serif !important; letter-spacing:1px; }
+.eb-box p { margin: 0 0 9px; } .eb-box p:last-child { margin-bottom:0; }
+.eb-muted { color:#d1b998; } .eb-strong { color:#f3ddb8; }
+.eb-tag { display:inline-block; margin:4px 5px 4px 0; padding:3px 9px; border:1px solid #a1815d; color:#ead0a6; background:#33241b; font:11px Arial,sans-serif; letter-spacing:.5px; }
+.eb-links a { display:inline-block; margin: 5px 5px 0 0; padding:6px 12px; border:1px solid #ab8961; color:#f4dbb5 !important; background:#644832; text-decoration:none; font: 12px Arial,sans-serif; }
+.eb-links a:hover { background:#8a6847; }
+.eb-footer { margin-top:13px; padding: 11px; border-top: 1px solid #94734f; text-align:center; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#cbb08b; }
+@media (max-width: 650px) { .eb-grid { grid-template-columns:1fr; } .eb-hero h2 { font-size:28px!important; } .eb-profile { padding:0 5px; } }
