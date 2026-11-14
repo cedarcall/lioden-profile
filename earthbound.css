@@ -227,3 +227,129 @@ html body .container.main h1,
 html body .container.main a:not(.btn) {
     color: #674833;
 }
+/* =========================================
+   EARTHBOUND V4 — cards, comments, leaves
+   Paste at the VERY bottom
+========================================= */
+
+/* --- 1) Recolor thumbnail cards / cave cards / dynasty boxes --- */
+
+/* General card containers */
+.thumbnail,
+.feature,
+.well,
+.panel,
+.div_box,
+.item,
+.cave,
+.mound {
+  background: #d8c5a5 !important;
+  border: 1px solid #a07a57 !important;
+  color: #5f4230 !important;
+  box-shadow: none !important;
+}
+
+/* Caption / label areas under images */
+.thumbnail .caption,
+.caption,
+.panel-footer,
+.feature-footer,
+.cave-footer,
+.mound-footer {
+  background: #ead9ba !important;
+  color: #6b4a35 !important;
+  border-top: 1px solid #b08b66 !important;
+}
+
+/* Titles/text inside those boxes */
+.thumbnail h3,
+.thumbnail h4,
+.caption,
+.caption a,
+.panel-title,
+.feature a,
+.well a {
+  color: #744f37 !important;
+}
+
+/* Buttons/links that sit in box-like rows */
+.container.main .btn,
+.container.main .btn-default,
+.container.main button,
+.container.main input[type="submit"] {
+  background: #8a6547 !important;
+  border-color: #b18a62 !important;
+  color: #f6e7c9 !important;
+}
+
+.container.main .btn:hover,
+.container.main .btn-default:hover,
+.container.main button:hover,
+.container.main input[type="submit"]:hover {
+  background: #a17653 !important;
+  color: #fff4df !important;
+}
+
+/* --- 2) Hide profile comment section --- */
+/* Note: this removes the visible comments area + input */
+#commentBox,
+.commentBox,
+.comment-box,
+textarea[name="comment"],
+input[placeholder="Comment"],
+input[value="Post"],
+input[type="submit"][value="Post"] {
+  display: none !important;
+}
+
+/* Sometimes the empty comment wrapper still remains */
+div:has(> #commentBox),
+div:has(> .commentBox),
+div:has(> textarea[name="comment"]) {
+  display: none !important;
+}
+
+/* Fallback: hide common bordered comment areas */
+.container.main > div[style*="border"],
+.container.main .comment-holder {
+  display: none !important;
+}
+
+/* --- 3) Decorative side leaves --- */
+body {
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 120px;
+  width: 220px;
+  height: 760px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.22;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 760'><g fill='%23553a2b' fill-opacity='1'><path d='M154 34c-34 10-80 57-91 136 79-15 129-61 138-127-14-8-29-11-47-9z'/><path d='M78 151c19 33 67 79 135 93-16-73-58-124-123-137-10 13-18 28-12 44z'/><path d='M158 285c-38 9-87 58-97 138 81-18 133-66 142-130-12-7-29-11-45-8z'/><path d='M84 415c21 32 68 75 132 85-15-69-57-116-120-126-11 12-19 25-12 41z'/><path d='M150 533c-35 8-77 49-87 117 70-14 120-56 129-111-12-8-24-10-42-6z'/><path d='M90 633c19 27 57 59 112 67-13-56-45-93-97-103-10 8-18 18-15 36z'/></g></svg>");
+}
+
+body::before {
+  left: 12px;
+}
+
+body::after {
+  right: 12px;
+  transform: scaleX(-1);
+}
+
+/* Keep site content above the decorative leaves */
+#main,
+.container.main,
+.navbar,
+#header,
+#content {
+  position: relative;
+  z-index: 1;
+}
