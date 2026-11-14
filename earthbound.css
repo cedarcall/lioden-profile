@@ -85,3 +85,73 @@ input, textarea, select { background-color: #e9d9bf; color: #302219; border-colo
 .eb-links a:hover { background:#8a6847; }
 .eb-footer { margin-top:13px; padding: 11px; border-top: 1px solid #94734f; text-align:center; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#cbb08b; }
 @media (max-width: 650px) { .eb-grid { grid-template-columns:1fr; } .eb-hero h2 { font-size:28px!important; } .eb-profile { padding:0 5px; } }
+
+/* EARTHBOUND v2 — Lioden interior recoloring */
+/* Foreground and the den's content column */
+.container.main, div.container.main {
+  background: #d9c5a6 !important;
+  color: #35271d !important;
+}
+.col-md-9.col-xs-12, .col-md-9 {
+  background: #d9c5a6 !important;
+  color: #35271d !important;
+}
+/* Breadcrumb and primary headings */
+.breadcrumb {
+  background: #eee0c8 !important;
+  color: #674833 !important;
+  border: 1px solid #b49572 !important;
+}
+.breadcrumb a, .container.main a:not(.btn):not(.eb-links a) { color: #68452f; }
+.breadcrumb a:hover, .container.main a:not(.btn):not(.eb-links a):hover { color: #9a622f; }
+.container.main h1, .container.main h2, .container.main h3 {
+  color: #674833 !important;
+}
+/* Den information tables, including the king's stats and pride overview */
+.container.main .table {
+  background: #d9c5a6 !important;
+  color: #35271d !important;
+  border: 1px solid #9c7b5c !important;
+}
+.container.main .table .top, .container.main .table .bottom,
+.container.main .table > thead > tr > th {
+  background: #674833 !important;
+  color: #f5dfbb !important;
+  border-color: #9c7b5c !important;
+}
+.container.main .table .top a, .container.main .table .bottom a { color: #f5dfbb !important; }
+.container.main .table tr.right, .container.main .table td.right,
+.container.main .table .right_odd, .container.main .table .right-odd {
+  background: #d0b897 !important;
+  color: #35271d !important;
+}
+.container.main .inner-table { background: #e3d0b3 !important; color: #35271d !important; }
+.container.main .inner-table .left { background: #a98a6b !important; color: #32231a !important; }
+.container.main .inner-table .right { background: #e3d0b3 !important; color: #35271d !important; }
+.container.main .table td, .container.main .table th { border-color: #b29372 !important; }
+/* Comment box / editable fields */
+#commentBox, .commentBox, .comment-box, .container.main textarea {
+  background: #eee0c8 !important;
+  color: #35271d !important;
+  border: 1px solid #987456 !important;
+}
+.container.main input:not([type='submit']):not([type='button']),
+.container.main select {
+  background: #f1e4d0 !important;
+  color: #35271d !important;
+  border: 1px solid #a98a6b !important;
+}
+/* Sidebar panels stay dark and legible against the lighter inner content */
+.container.main .panel, .container.main .panel-default {
+  background: #684a36 !important;
+  color: #f3dfc0 !important;
+  border-color: #a78764 !important;
+}
+.container.main .panel-heading, .container.main .panel-default > .panel-heading {
+  background: #4b3428 !important;
+  color: #f3dfc0 !important;
+}
+/* Keep custom dark profile cards distinct on the parchment canvas */
+.container.main .eb-profile { color: #f0ddbd !important; }
+.container.main .eb-profile h2, .container.main .eb-profile h3 { color: #f2dbb5 !important; }
+.container.main .eb-profile a { color: #f4dbb5 !important; }
