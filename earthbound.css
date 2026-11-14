@@ -155,3 +155,75 @@ input, textarea, select { background-color: #e9d9bf; color: #302219; border-colo
 .container.main .eb-profile { color: #f0ddbd !important; }
 .container.main .eb-profile h2, .container.main .eb-profile h3 { color: #f2dbb5 !important; }
 .container.main .eb-profile a { color: #f4dbb5 !important; }
+
+/* EARTHBOUND V3 — Interior color overrides */
+
+/* Main den background */
+html body div.container.main,
+html body .container.main,
+html body .col-md-9.col-xs-12,
+html body .col-md-9 {
+    background: #D9C5A6 !important;
+    background-color: #D9C5A6 !important;
+    color: #35271D !important;
+}
+
+/* Main headings */
+html body .container.main h1,
+html body .container.main h2,
+html body .container.main h3 {
+    color: #674833 !important;
+}
+
+/* Breadcrumb bar */
+html body .breadcrumb {
+    background: #EAD8B9 !important;
+    color: #553A2B !important;
+}
+
+/* Information tables */
+html body .table {
+    background: #E3D0B3 !important;
+    color: #35271D !important;
+    border-color: #927052 !important;
+}
+
+/* Table headers */
+html body .table .top,
+html body .table .bottom,
+html body .table .left,
+html body .table th {
+    background: #674833 !important;
+    color: #F5DFBB !important;
+}
+
+/* Table cells */
+html body .inner-table .left {
+    background: #B29372 !important;
+    color: #302219 !important;
+}
+
+html body .inner-table .right,
+html body .right {
+    background: #E3D0B3 !important;
+    color: #302219 !important;
+}
+
+html body .right_odd {
+    background: #D0B897 !important;
+    color: #302219 !important;
+}
+
+/* Comment area */
+html body #commentBox,
+html body .commentBox,
+html body .comment-box {
+    background: #EAD8B9 !important;
+    color: #35271D !important;
+}
+
+/* Links */
+html body .container.main h1,
+html body .container.main a:not(.btn) {
+    color: #674833;
+}
